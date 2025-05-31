@@ -1,4 +1,4 @@
-import { Inject, Injectable, Logger } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { LoggerService } from './core/logger/logger.service';
 import { DatabaseService } from './database/database.service';
 
@@ -24,6 +24,7 @@ export class AppService {
     this.databaseService.user.create({
       data: { email: 'mcwachira@gmail.com' },
     });
+    this.databaseService.user.findMany();
     //set not working
     this.cacheService.set(`key`, `Value from cache`, 1000);
     const ValueFromCache = await this.cacheService.get('key');

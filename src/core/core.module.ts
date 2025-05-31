@@ -5,8 +5,8 @@ import { APP_INTERCEPTOR } from '@nestjs/core';
 import { TransformResponseInterceptor } from './interceptor/transform-response.interceptor';
 import { LoggerService } from './logger/logger.service';
 import { LoggerMiddleware } from './middlware/logger/logger.middleware';
-import { DatabaseService } from 'src/database/database.service';
-import { CacheInterceptor, CacheModule } from '@nestjs/cache-manager';
+import { DatabaseService } from '../database/database.service';
+import { CacheModule } from '@nestjs/cache-manager';
 import * as redisStore from 'cache-manager-redis-store';
 import { CacheService } from './cache/cache.service';
 
